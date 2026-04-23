@@ -1,1 +1,47 @@
-/* Filled in Task 2 */
+:root {
+  --color-primary: #555555;
+  --color-accent: #f39b8f;
+  --color-background: #f6f6f6;
+  --color-background-white: #ffffff;
+  --color-text: #555555;
+  --color-text-light: #bfbfbf;
+  --color-border: #e6e6e6;
+  --font-heading-en: 'Inter', sans-serif;
+  --font-heading-ja: 'Noto Serif JP', serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+  --max-width: 480px;
+  --banner-height: 60px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light only;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
