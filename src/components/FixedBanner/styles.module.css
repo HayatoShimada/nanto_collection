@@ -1,16 +1,16 @@
 .banner {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
   display: flex;
   justify-content: center;
   gap: 0;
   background: var(--color-primary);
   height: var(--banner-height);
+  width: 100%;
   max-width: var(--max-width);
-  margin: 0 auto;
 }
 
 .button {
