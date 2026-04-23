@@ -24,7 +24,7 @@ export function Hero() {
     <div ref={containerRef} className={styles.container} id={SECTION_IDS.hero}>
       <div className={styles.stickyWrapper}>
         <div className={styles.catchcopyWrapper}>
-          <h1 className={styles.title}>{HERO.catchcopy}</h1>
+          <h1 className={styles.title}>わたしを着る。<br />南砺に立つ。</h1>
           <p className={styles.date}>{HERO.date}</p>
           <p className={styles.tagline}>{HERO.tagline}</p>
         </div>
