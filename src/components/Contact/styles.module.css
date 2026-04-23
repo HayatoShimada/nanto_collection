@@ -1,0 +1,83 @@
+.heading {
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
+}
+
+.info {
+  margin-bottom: 24px;
+}
+
+.label {
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.email {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.person {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+  padding-bottom: calc(var(--banner-height) + 24px);
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+.ctaSecondary {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.ctaSecondary:hover {
+  opacity: 0.85;
+}
