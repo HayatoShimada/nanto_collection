@@ -10,7 +10,7 @@ NANTO Collection (なんコレ) のイベントウェブサイト。2027/03/14�
 - **Styling:** CSS Modules + CSS変数
 - **Animation:** Framer Motion
 - **Hosting:** Vercel
-- **Font:** M PLUS Rounded 1c (Google Fonts, next/font/google)
+- **Fonts:** Inter + Noto Sans JP + Noto Serif JP (Google Fonts, next/font/google)
 
 ## Design Constraints
 
@@ -24,24 +24,44 @@ NANTO Collection (なんコレ) のイベントウェブサイト。2027/03/14�
 
 - モバイルファースト（max-width: 480px, margin: 0 auto）
 - デスクトップでは中央寄せ + 左右余白
-- 参考: https://tsuchiya-randoseru.jp/collections/depsoa
+- フレームワーク参考: https://www.co-co-palm.jp/
+- レイアウト参考: https://tsuchiya-randoseru.jp/collections/depsoa
 
-## Color Palette (Initial)
+## Design Tone
 
-参考: https://brand.un-dimension.com/vol7
+参考: https://www.melt-interface.com/melt-mouse
+
+- ミニマル・洗練・ナチュラルな雰囲気
+- 大きな余白、グリッドベース、テキスト中央揃え
+- フォントウェイトは細め（thin〜regular）で上質な印象
+- フレームワーク参考: https://www.co-co-palm.jp/
+- アニメーション参考: https://dac-web.co.jp/
+
+## Color Palette
+
+参考: https://biophilia.co.jp/
 
 ```css
 :root {
-  --color-primary: #4457af;      /* 深い青 */
-  --color-accent-pink: #FFB4E2;  /* ピンク */
-  --color-accent-red: #E24266;   /* 赤系アクセント */
-  --color-background: #ffffff;
-  --color-text: #333333;
-  --font-heading: 'M PLUS Rounded 1c', sans-serif;
-  --font-body: 'M PLUS Rounded 1c', sans-serif;
+  --color-primary: #555555;        /* メインテキスト・見出し */
+  --color-accent: #f39b8f;         /* ソフト赤（CTA・アクセント） */
+  --color-background: #f6f6f6;     /* グレーベース背景 */
+  --color-background-white: #ffffff; /* 白背景（カード等） */
+  --color-text: #555555;           /* 本文テキスト */
+  --color-text-light: #bfbfbf;     /* 補助テキスト */
+  --color-border: #e6e6e6;         /* 区切り線 */
   --max-width: 480px;
+  --banner-height: 60px;
 }
 ```
+
+## Fonts
+
+参考: https://www.melt-interface.com/melt-mouse
+
+- **英語:** Inter (weight 100〜400中心、thin〜regular)
+- **日本語見出し:** Noto Serif JP (weight 200〜400、上品な印象)
+- **日本語本文:** Noto Sans JP (weight 100〜400、読みやすさ)
 
 後からクライアント指定で変更予定。CSS変数を変えるだけで全体反映。
 

@@ -6,7 +6,7 @@
 
 **Architecture:** Next.js App Router with a single page (`page.tsx`) composing 8 section components + a fixed banner. All text lives in `constants/content.ts`, all external URLs in `constants/links.ts`. Styling uses CSS Modules with CSS custom properties for theming. Animations use Framer Motion.
 
-**Tech Stack:** Next.js (App Router), CSS Modules, Framer Motion, M PLUS Rounded 1c (Google Fonts)
+**Tech Stack:** Next.js (App Router), CSS Modules, Framer Motion, Inter + Noto Sans JP + Noto Serif JP (Google Fonts)
 
 **Spec:** `docs/superpowers/specs/2026-04-23-nanto-collection-website-design.md`
 
@@ -133,14 +133,16 @@ git commit -m "chore: scaffold Next.js project with Framer Motion"
 
 ```css
 :root {
-  --color-primary: #4457af;
-  --color-accent-pink: #FFB4E2;
-  --color-accent-red: #E24266;
-  --color-background: #ffffff;
-  --color-text: #333333;
-  --color-text-light: #666666;
-  --font-heading: 'M PLUS Rounded 1c', sans-serif;
-  --font-body: 'M PLUS Rounded 1c', sans-serif;
+  --color-primary: #555555;
+  --color-accent: #f39b8f;
+  --color-background: #f6f6f6;
+  --color-background-white: #ffffff;
+  --color-text: #555555;
+  --color-text-light: #bfbfbf;
+  --color-border: #e6e6e6;
+  --font-heading-en: 'Inter', sans-serif;
+  --font-heading-ja: 'Noto Serif JP', serif;
+  --font-body: 'Noto Sans JP', sans-serif;
   --max-width: 480px;
   --banner-height: 60px;
 }
@@ -160,6 +162,7 @@ html {
 
 body {
   font-family: var(--font-body);
+  font-weight: 300;
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.8;
@@ -184,12 +187,25 @@ img {
 
 ```tsx
 import type { Metadata } from "next";
-import { M_PLUS_Rounded_1c } from "next/font/google";
+import { Inter, Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
-const mPlusRounded = M_PLUS_Rounded_1c({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
+const notoSerifJP = Noto_Serif_JP({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "700"],
+  variable: "--font-noto-serif-jp",
   display: "swap",
 });
 
@@ -212,7 +228,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={mPlusRounded.className}>
+    <html
+      lang="ja"
+      className={`${inter.variable} ${notoSansJP.variable} ${notoSerifJP.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
@@ -222,9 +241,9 @@ export default function RootLayout({
 - [ ] **Step 3: Verify in browser**
 
 Run `npm run dev`. Confirm:
-- Page loads with white background
+- Page loads with light gray (#f6f6f6) background
 - No dark mode applied regardless of system setting
-- M PLUS Rounded 1c font is loaded (check Network tab)
+- Inter, Noto Sans JP, Noto Serif JP fonts are loaded (check Network tab)
 
 - [ ] **Step 4: Commit**
 
@@ -531,7 +550,7 @@ export function FadeInSection({ children, className, id }: Props) {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 80px 24px;
 }
 ```
 
@@ -622,6 +641,7 @@ export function Hero() {
 .container {
   position: relative;
   height: 200vh;
+  background: var(--color-background-white);
 }
 
 .stickyWrapper {
@@ -641,28 +661,33 @@ export function Hero() {
   position: absolute;
   z-index: 1;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.75rem;
+  font-weight: 300;
   color: var(--color-primary);
-  letter-spacing: 0.1em;
-  margin-bottom: 16px;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .date {
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: var(--font-heading-en);
+  font-size: 0.8125rem;
+  font-weight: 300;
   color: var(--color-text);
   margin-bottom: 8px;
+  letter-spacing: 0.1em;
 }
 
 .tagline {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 300;
   color: var(--color-text-light);
+  letter-spacing: 0.05em;
 }
 
 .imageWrapper {
@@ -746,43 +771,48 @@ export function About() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
   margin-bottom: 12px;
+  letter-spacing: 0.1em;
 }
 
 .subheading {
-  font-size: 0.875rem;
-  color: var(--color-accent-red);
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  font-weight: 400;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
 }
 
 .body {
-  font-size: 0.9375rem;
-  line-height: 2;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2.2;
   margin-bottom: 16px;
 }
 
 .valuesSection {
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .valuesHeading {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.125rem;
+  font-weight: 400;
   color: var(--color-primary);
   margin-bottom: 8px;
+  letter-spacing: 0.1em;
 }
 
 .valuesSubheading {
-  font-size: 0.875rem;
-  color: var(--color-accent-red);
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  font-weight: 400;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
 }
 ```
 
@@ -850,15 +880,16 @@ export function EventInfo() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
 }
 
 .card {
-  background: #fafafa;
+  background: var(--color-background-white);
   border-radius: 12px;
   padding: 32px 24px;
 }
@@ -876,19 +907,22 @@ export function EventInfo() {
 }
 
 .label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent-red);
-  letter-spacing: 0.1em;
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .value {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 300;
   line-height: 1.8;
 }
 
 .address {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--color-text-light);
 }
 ```
@@ -1010,29 +1044,32 @@ export function Application() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
 }
 
 .body {
-  font-size: 0.9375rem;
-  line-height: 2;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2.2;
   margin-bottom: 12px;
 }
 
 .block {
-  margin-top: 40px;
+  margin-top: 48px;
 }
 
 .subheading {
-  font-family: var(--font-heading);
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
 }
 
 .list {
@@ -1041,24 +1078,27 @@ export function Application() {
 }
 
 .listItem {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 300;
   padding: 6px 0 6px 20px;
   position: relative;
 }
 
 .listItem::before {
-  content: "●";
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--color-accent-pink);
-  font-size: 0.5rem;
-  top: 12px;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
 }
 
 .detailList {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .detailItem {
@@ -1068,43 +1108,45 @@ export function Application() {
 }
 
 .detailLabel {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent-red);
-  letter-spacing: 0.05em;
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
 }
 
 .examplesBlock {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .examplesLabel {
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: var(--color-text-light);
   margin-bottom: 8px;
 }
 
 .note {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 300;
   color: var(--color-text-light);
-  margin-top: 12px;
+  margin-top: 16px;
   line-height: 1.8;
 }
 
 .steps {
   list-style: none;
   padding: 0;
-  counter-reset: none;
 }
 
 .step {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 10px 0;
-  font-size: 0.9375rem;
-  border-bottom: 1px solid #f0f0f0;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .stepNumber {
@@ -1116,22 +1158,24 @@ export function Application() {
   border-radius: 50%;
   background: var(--color-primary);
   color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
   flex-shrink: 0;
 }
 
 .cta {
   display: block;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 48px;
   padding: 16px;
   text-align: center;
-  background: var(--color-accent-red);
+  background: var(--color-accent);
   color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.875rem;
   border-radius: 8px;
+  letter-spacing: 0.05em;
   transition: opacity 0.2s;
 }
 
@@ -1208,37 +1252,40 @@ export function Donation() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
 }
 
 .body {
-  font-size: 0.9375rem;
-  line-height: 2;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2.2;
   margin-bottom: 12px;
 }
 
 .card {
-  background: #fafafa;
+  background: var(--color-background-white);
   border-radius: 12px;
-  padding: 24px;
-  margin-top: 24px;
+  padding: 28px 24px;
+  margin-top: 32px;
 }
 
 .detailHeading {
+  font-family: var(--font-heading-ja);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .detailList {
   display: flex;
   gap: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .detailItem {
@@ -1248,25 +1295,29 @@ export function Donation() {
 }
 
 .detailLabel {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent-red);
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
 }
 
 .detailValue {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .benefit {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 300;
   line-height: 1.8;
   color: var(--color-text-light);
   margin-bottom: 8px;
 }
 
 .note {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 300;
   color: var(--color-text-light);
 }
 
@@ -1274,7 +1325,7 @@ export function Donation() {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
 .cta {
@@ -1282,11 +1333,12 @@ export function Donation() {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background: var(--color-accent-red);
+  background: var(--color-accent);
   color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.875rem;
   border-radius: 8px;
+  letter-spacing: 0.05em;
   transition: opacity 0.2s;
 }
 
@@ -1301,10 +1353,11 @@ export function Donation() {
   text-align: center;
   background: transparent;
   color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1rem;
-  border: 2px solid var(--color-primary);
+  font-weight: 400;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
+  letter-spacing: 0.05em;
   transition: opacity 0.2s;
 }
 
@@ -1356,16 +1409,18 @@ export function Committee() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
 }
 
 .body {
-  font-size: 0.9375rem;
-  line-height: 2;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2.2;
   margin-bottom: 16px;
 }
 ```
@@ -1451,11 +1506,12 @@ export function Faq() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
 }
 
 .list {
@@ -1464,7 +1520,7 @@ export function Faq() {
 }
 
 .item {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .question {
@@ -1477,16 +1533,18 @@ export function Faq() {
   border: none;
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--color-text);
   text-align: left;
   gap: 12px;
 }
 
 .icon {
-  font-size: 1.25rem;
-  color: var(--color-primary);
+  font-family: var(--font-heading-en);
+  font-size: 1.125rem;
+  font-weight: 200;
+  color: var(--color-accent);
   transition: transform 0.3s;
   flex-shrink: 0;
 }
@@ -1500,10 +1558,11 @@ export function Faq() {
 }
 
 .answer {
-  font-size: 0.875rem;
-  line-height: 1.8;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 2;
   color: var(--color-text-light);
-  padding: 0 0 20px 0;
+  padding: 0 0 24px 0;
 }
 ```
 
@@ -1575,37 +1634,41 @@ export function Contact() {
 
 ```css
 .heading {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-heading-ja);
+  font-size: 1.375rem;
+  font-weight: 400;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1em;
 }
 
 .info {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent-red);
-  letter-spacing: 0.05em;
+  font-family: var(--font-heading-en);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
   margin-bottom: 4px;
 }
 
 .value {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 300;
   line-height: 1.8;
 }
 
 .email {
   color: var(--color-primary);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .person {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--color-text-light);
 }
 
@@ -1613,8 +1676,8 @@ export function Contact() {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 32px;
-  padding-bottom: calc(var(--banner-height) + 20px);
+  margin-top: 40px;
+  padding-bottom: calc(var(--banner-height) + 24px);
 }
 
 .cta {
@@ -1622,11 +1685,12 @@ export function Contact() {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background: var(--color-accent-red);
+  background: var(--color-accent);
   color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.875rem;
   border-radius: 8px;
+  letter-spacing: 0.05em;
   transition: opacity 0.2s;
 }
 
@@ -1641,10 +1705,11 @@ export function Contact() {
   text-align: center;
   background: transparent;
   color: var(--color-primary);
-  font-weight: 700;
-  font-size: 1rem;
-  border: 2px solid var(--color-primary);
+  font-weight: 400;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
+  letter-spacing: 0.05em;
   transition: opacity 0.2s;
 }
 
@@ -1756,19 +1821,19 @@ export function FixedBanner() {
   border: none;
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 0.8125rem;
+  font-weight: 400;
   cursor: pointer;
   transition: background 0.2s;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 .button:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 ```
 
@@ -1828,7 +1893,8 @@ Run `npm run dev`. Confirm:
 - Fixed banner appears after scrolling past hero
 - Banner buttons scroll to correct sections
 - Layout is centered with max-width 480px
-- Font is M PLUS Rounded 1c throughout
+- Fonts are Inter (English), Noto Serif JP (headings), Noto Sans JP (body) with thin/light weights
+- Overall aesthetic is minimal, clean, with ample whitespace and gray-toned color palette
 
 - [ ] **Step 3: Run TypeScript check**
 
