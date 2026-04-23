@@ -13,6 +13,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .stickyWrapper::after {
@@ -32,7 +34,7 @@
   z-index: 1;
   text-align: center;
   padding: 24px 24px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(8px);
   border-radius: 4px;
 }
