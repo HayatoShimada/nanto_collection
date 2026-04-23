@@ -1,0 +1,38 @@
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: var(--color-primary);
+  height: var(--banner-height);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.1em;
+}
+
+.button:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
