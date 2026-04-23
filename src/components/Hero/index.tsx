@@ -30,7 +30,7 @@ export function Hero() {
         </div>
         <motion.div className={styles.imageWrapper} style={{ y: imageY, clipPath }}>
           <img
-            src="/images/hero-placeholder.svg"
+            src="/images/hero.png"
             alt="NANTO Collection 2027"
             className={styles.heroImage}
           />

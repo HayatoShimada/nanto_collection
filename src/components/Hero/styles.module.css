@@ -58,8 +58,8 @@
 }
 
 .heroImage {
-  width: 60%;
-  max-width: 300px;
+  width: 70%;
+  max-width: 350px;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
