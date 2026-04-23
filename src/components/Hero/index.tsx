@@ -13,12 +13,7 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
-  const clipBottom = useTransform(scrollYProgress, [0, 0.6], [40, 0]);
-  const clipPath = useTransform(
-    clipBottom,
-    (v) => `inset(0 0 ${v}% 0)`
-  );
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
 
   return (
     <div ref={containerRef} className={styles.container} id={SECTION_IDS.hero}>
@@ -28,7 +23,7 @@ export function Hero() {
           <p className={styles.date}>{HERO.date}</p>
           <p className={styles.tagline}>{HERO.tagline}</p>
         </div>
-        <motion.div className={styles.imageWrapper} style={{ y: imageY, clipPath }}>
+        <motion.div className={styles.imageWrapper} style={{ scale: imageScale }}>
           <img
             src="/images/hero.png"
             alt="NANTO Collection 2027"
