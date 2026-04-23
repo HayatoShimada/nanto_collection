@@ -13,7 +13,7 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
+  const imageScale = useTransform(scrollYProgress, [0, 0.8], [1.4, 1]);
 
   return (
     <div ref={containerRef} className={styles.container} id={SECTION_IDS.hero}>
