@@ -23,30 +23,32 @@ export function FixedBanner() {
   };
 
   return (
-    <motion.div
-      className={styles.banner}
-      initial={{ y: "100%" }}
-      animate={{ y: visible ? "0%" : "100%" }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-    >
-      <button
-        className={styles.button}
-        onClick={() => scrollTo(SECTION_IDS.application)}
+    <div className={styles.wrapper}>
+      <motion.div
+        className={styles.banner}
+        initial={{ y: "100%" }}
+        animate={{ y: visible ? "0%" : "100%" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        {FIXED_BANNER.apply}
-      </button>
-      <button
-        className={styles.button}
-        onClick={() => scrollTo(SECTION_IDS.donation)}
-      >
-        {FIXED_BANNER.donate}
-      </button>
-      <button
-        className={styles.button}
-        onClick={() => scrollTo(SECTION_IDS.contact)}
-      >
-        {FIXED_BANNER.contact}
-      </button>
-    </motion.div>
+        <button
+          className={styles.button}
+          onClick={() => scrollTo(SECTION_IDS.application)}
+        >
+          {FIXED_BANNER.apply}
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => scrollTo(SECTION_IDS.donation)}
+        >
+          {FIXED_BANNER.donate}
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => scrollTo(SECTION_IDS.contact)}
+        >
+          {FIXED_BANNER.contact}
+        </button>
+      </motion.div>
+    </div>
   );
 }

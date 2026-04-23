@@ -1,16 +1,21 @@
-.banner {
+.wrapper {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   z-index: 100;
   display: flex;
   justify-content: center;
-  gap: 0;
-  background: var(--color-primary);
-  height: var(--banner-height);
+  pointer-events: none;
+}
+
+.banner {
+  display: flex;
   width: 100%;
   max-width: var(--max-width);
+  background: var(--color-primary);
+  height: var(--banner-height);
+  pointer-events: auto;
 }
 
 .button {
