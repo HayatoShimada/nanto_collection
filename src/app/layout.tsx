@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
+import { PageLoader } from "@/components/PageLoader";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,7 +45,17 @@ export default function RootLayout({
       lang="ja"
       className={`${inter.variable} ${notoSansJP.variable} ${notoSerifJP.variable}`}
     >
-      <body>{children}</body>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/background.png"
+          fetchPriority="high"
+        />
+      </head>
+      <body>
+        <PageLoader>{children}</PageLoader>
+      </body>
     </html>
   );
 }
