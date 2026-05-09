@@ -130,7 +130,7 @@ export const DONATION = {
     note: "ご寄付・ご協賛についての詳細は、実行委員会までお気軽にお問い合わせください。",
   },
   buttons: {
-    inquiry: "寄付・協賛について問い合わせる",
+    inquiry: "応募・協賛について問い合わせる",
     apply: "寄付・協賛を申し込む",
   },
 } as const;
@@ -184,7 +184,7 @@ export const CONTACT = {
   person: "米倉宛",
   buttons: {
     apply: "参加モデル応募はこちら",
-    inquiry: "寄付・協賛について問い合わせる",
+    inquiry: "応募・協賛について問い合わせる",
   },
 } as const;
 

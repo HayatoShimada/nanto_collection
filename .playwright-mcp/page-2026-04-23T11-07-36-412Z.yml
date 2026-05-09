@@ -1,0 +1,191 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "わたしを着る。 南砺に立つ。" [level=1] [ref=e6]:
+          - text: わたしを着る。
+          - text: 南砺に立つ。
+        - paragraph [ref=e7]: 2027年3月14日（土）開催
+        - paragraph [ref=e8]: 南砺市民の、南砺市民による、南砺市民のためのファッションショー
+      - img "NANTO Collection 2027" [ref=e10]
+    - generic [ref=e11]:
+      - heading "なんコレってなに？" [level=2] [ref=e12]
+      - paragraph [ref=e13]: 南砺市民の、南砺市民による、南砺市民のためのファッションショー
+      - paragraph [ref=e14]: なんコレとは、南砺市民の、南砺市民による、南砺市民のためのファッションショー「NANTO Collection」 です。
+      - paragraph [ref=e15]: 自分らしく、自由に、いきいきと、「私がわたしを生きる」 を思いきり楽しみながら表現するステージ。
+      - paragraph [ref=e16]: 大切にしたいのは、上手に見せることや、誰かの正解に合わせることではなく、その人自身の想い、その人らしい在り方がまっすぐ立ち上がることです。
+      - paragraph [ref=e17]: ひとりの挑戦が、誰かの心を動かす。ひとりの表現が、まちの空気を変える力になる。
+      - paragraph [ref=e18]: なんコレは、そんなきっかけになることを目指しています。
+      - generic [ref=e19]:
+        - heading "なんコレが大切にしていること" [level=3] [ref=e20]
+        - paragraph [ref=e21]: 自分らしく立つことが、まちを元気にする
+        - paragraph [ref=e22]: なんコレが大切にしているのは、「特別な誰か」のステージではなく、南砺で生きる一人ひとりが、自由に自分を表現できる場であるということです。
+        - paragraph [ref=e23]: 年齢も、性別も、経験も問いません。必要なのは、「自分を表現してみたい」「一歩踏み出してみたい」という、その気持ちです。
+        - paragraph [ref=e24]: 誰かみたいになるためではなく、自分自身を生きるために。
+        - paragraph [ref=e25]: その姿が、きっと誰かの勇気になっていく。なんコレは、そんなあたたかな循環が生まれる場でありたいと思っています。
+    - generic [ref=e26]:
+      - heading "開催概要" [level=2] [ref=e27]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - term [ref=e31]: 日時
+          - definition [ref=e32]:
+            - text: 2027年3月14日（土）
+            - text: 開場 14:00 ／ 開演 14:30
+        - generic [ref=e33]:
+          - term [ref=e34]: 会場
+          - definition [ref=e35]:
+            - text: なんとエナジー文化創造センター ヘリオス 円形劇場
+            - generic [ref=e36]: （南砺市やかた100）
+        - generic [ref=e37]:
+          - term [ref=e38]: 入場料
+          - definition [ref=e39]: 無料
+    - generic [ref=e40]:
+      - heading "参加モデル大募集中！" [level=2] [ref=e41]
+      - paragraph [ref=e42]: 南砺市に息づく、すべての方へ。
+      - paragraph [ref=e43]: 一日限りのこのステージで、心の声を大切に「わたしを表現する」ことに挑戦してみませんか。
+      - paragraph [ref=e44]: 必要なのは、南砺市で自分らしく生きていきたいという思いだけ。
+      - paragraph [ref=e45]: さあ、一緒に踏み出そう。あなたの一歩が、南砺の未来を変える力になります。
+      - generic [ref=e46]:
+        - heading "応募資格" [level=3] [ref=e47]
+        - list [ref=e48]:
+          - listitem [ref=e49]: 南砺市にお住まいの方
+          - listitem [ref=e50]: 南砺市に通勤・通学している方
+          - listitem [ref=e51]: 南砺市にゆかりのある方
+          - listitem [ref=e52]: 年齢・性別不問
+          - listitem [ref=e53]: 推薦での応募もOK
+      - generic [ref=e54]:
+        - heading "募集要項" [level=3] [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - term [ref=e58]: 定員
+            - definition [ref=e59]: 30〜40人程度（応募多数の場合、抽選とさせていただきます）
+          - generic [ref=e60]:
+            - term [ref=e61]: 出演料
+            - definition [ref=e62]: 無料
+          - generic [ref=e63]:
+            - term [ref=e64]: 衣装について
+            - definition [ref=e65]: 「自分が表現したいこと」をテーマに、各自ご用意いただきます。衣装選びや準備については、実行委員会がサポートいたしますので、どうぞお気軽にご相談ください。
+          - generic [ref=e66]:
+            - term [ref=e67]: 出演形態
+            - definition [ref=e68]: お一人での出演はもちろん、親子で、お孫さんと、友達同士で、カップルで、グループでの出演も歓迎します。
+          - generic [ref=e69]:
+            - term [ref=e70]: 申込方法
+            - definition [ref=e71]: 申込フォームよりお申し込みください。お申し込み完了後、実行委員会よりご連絡させていただきます。
+          - generic [ref=e72]:
+            - term [ref=e73]: 申込締切
+            - definition [ref=e74]: 2026年8月31日（月）
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: 衣装の例：
+          - list [ref=e77]:
+            - listitem [ref=e78]: ウェディングドレスをもう一度！
+            - listitem [ref=e79]: 鮮やかなカラードレスをまとって
+            - listitem [ref=e80]: なかなか着る機会のなくなってしまったお着物を今風にアレンジして
+            - listitem [ref=e81]: スーツをビシッと、親子、家族、お孫さんとおそろいで
+            - listitem [ref=e82]: 友達同士でテーマを決めて
+      - generic [ref=e83]:
+        - heading "こんな方に参加してほしい" [level=3] [ref=e84]
+        - list [ref=e85]:
+          - listitem [ref=e86]: 自分らしさを表現してみたい方
+          - listitem [ref=e87]: 新しいことに挑戦してみたい方
+          - listitem [ref=e88]: 南砺で何か面白いことをしてみたい方
+          - listitem [ref=e89]: 一歩踏み出すきっかけがほしい方
+          - listitem [ref=e90]: 大切な人と一緒に思い出に残る舞台に立ってみたい方
+          - listitem [ref=e91]: 「私がわたしを生きる」を形にしてみたい方
+        - paragraph [ref=e92]: 経験の有無は関係ありません。ファッションショーに出たことがない方も、大歓迎です！
+      - generic [ref=e93]:
+        - heading "応募後の流れ" [level=3] [ref=e94]
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - generic [ref=e97]: "1"
+            - generic [ref=e98]: 申込フォームから応募
+          - listitem [ref=e99]:
+            - generic [ref=e100]: "2"
+            - generic [ref=e101]: 実行委員会よりご連絡
+          - listitem [ref=e102]:
+            - generic [ref=e103]: "3"
+            - generic [ref=e104]: 出演に向けたご案内・ご相談
+          - listitem [ref=e105]:
+            - generic [ref=e106]: "4"
+            - generic [ref=e107]: 衣装や表現内容の準備
+          - listitem [ref=e108]:
+            - generic [ref=e109]: "5"
+            - generic [ref=e110]: 当日に向けた打ち合わせや練習など
+          - listitem [ref=e111]:
+            - generic [ref=e112]: "6"
+            - generic [ref=e113]: 本番当日、午前中にステージでリハーサル
+          - listitem [ref=e114]:
+            - generic [ref=e115]: "7"
+            - generic [ref=e116]: いざ本番へ！
+        - paragraph [ref=e117]: はじめての方にも安心してご参加いただけるよう、実行委員会でサポートしながら準備を進めていきます。
+      - link "参加モデルに応募する" [ref=e118] [cursor=pointer]:
+        - /url: "#application"
+    - generic [ref=e119]:
+      - heading "寄付金・協賛金のお願い" [level=2] [ref=e120]
+      - paragraph [ref=e121]: なんコレの想いに共感し、この挑戦を応援したいと思ってくださる方からのご寄付・ご協賛を募っています。
+      - paragraph [ref=e122]: 皆さまのご支援が、一人ひとりの表現を後押しし、南砺市の新しい未来を育てていきます。
+      - paragraph [ref=e123]: このステージを、出演する人にとっても、観る人にとっても、「南砺って面白い」「ここで生きるっていいな」と思える場にしていくために。
+      - paragraph [ref=e124]: ぜひお力をお貸しください。
+      - generic [ref=e125]:
+        - heading "ご支援について" [level=3] [ref=e126]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - term [ref=e129]: 一口
+            - definition [ref=e130]: 5,000円
+          - generic [ref=e131]:
+            - term [ref=e132]: 上限
+            - definition [ref=e133]: 10口（5万円）
+        - paragraph [ref=e134]: お名前を当日配布パンフレットに記載させていただきます。※金額に応じて、記載するお名前の大きさが変わります。
+        - paragraph [ref=e135]: ご寄付・ご協賛についての詳細は、実行委員会までお気軽にお問い合わせください。
+      - generic [ref=e136]:
+        - link "寄付・協賛について問い合わせる" [ref=e137] [cursor=pointer]:
+          - /url: mailto:nancolle2027@gmail.com
+        - link "寄付・協賛を申し込む" [ref=e138] [cursor=pointer]:
+          - /url: "#donation"
+    - generic [ref=e139]:
+      - heading "実行委員会より" [level=2] [ref=e140]
+      - paragraph [ref=e141]: 南砺には、まだまだたくさんの魅力があります。そしてその魅力は、このまちで生きる一人ひとりの中に、すでに息づいていると思っています。
+      - paragraph [ref=e142]: なんコレは、特別な誰かをただ“見る”だけの舞台ではなく、南砺に生きる一人ひとりの存在や表現が光る場をつくりたいという思いから生まれました。
+      - paragraph [ref=e143]: 自分を生きること。自分の想いをまとって立つこと。その姿はきっと、想像以上に美しく、力強いものです。
+      - paragraph [ref=e144]: この挑戦が、南砺の新しい景色につながっていくことを願っています。
+      - paragraph [ref=e145]: たくさんのご参加、ご来場、ご支援を心よりお待ちしております。
+    - generic [ref=e146]:
+      - heading "よくある質問" [level=2] [ref=e147]
+      - generic [ref=e148]:
+        - button "Q. ファッションショー未経験でも参加できますか？ +" [ref=e150] [cursor=pointer]:
+          - generic [ref=e151]: Q. ファッションショー未経験でも参加できますか？
+          - generic [ref=e152]: +
+        - button "Q. 一人で参加するのが不安です。 +" [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]: Q. 一人で参加するのが不安です。
+          - generic [ref=e156]: +
+        - button "Q. 家族や友人と一緒に出演できますか？ +" [ref=e158] [cursor=pointer]:
+          - generic [ref=e159]: Q. 家族や友人と一緒に出演できますか？
+          - generic [ref=e160]: +
+        - button "Q. 衣装について相談できますか？ +" [ref=e162] [cursor=pointer]:
+          - generic [ref=e163]: Q. 衣装について相談できますか？
+          - generic [ref=e164]: +
+        - button "Q. 年齢制限はありますか？ +" [ref=e166] [cursor=pointer]:
+          - generic [ref=e167]: Q. 年齢制限はありますか？
+          - generic [ref=e168]: +
+    - generic [ref=e169]:
+      - heading "お問い合わせ" [level=2] [ref=e170]
+      - generic [ref=e171]:
+        - paragraph [ref=e172]: 主催
+        - paragraph [ref=e173]: 南砺市さわやかネットワーク なんコレ実行委員会
+      - generic [ref=e174]:
+        - paragraph [ref=e175]: お問い合わせ先
+        - paragraph [ref=e176]:
+          - link "nancolle2027@gmail.com" [ref=e177] [cursor=pointer]:
+            - /url: mailto:nancolle2027@gmail.com
+          - generic [ref=e178]: （米倉宛）
+      - generic [ref=e179]:
+        - link "参加モデル応募はこちら" [ref=e180] [cursor=pointer]:
+          - /url: "#application"
+        - link "寄付・協賛について問い合わせる" [ref=e181] [cursor=pointer]:
+          - /url: mailto:nancolle2027@gmail.com
+    - generic [ref=e182]:
+      - button "応募" [ref=e183] [cursor=pointer]
+      - button "協賛" [ref=e184] [cursor=pointer]
+      - button "問合せ" [ref=e185] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e191] [cursor=pointer]:
+    - img [ref=e192]
+  - alert [ref=e195]

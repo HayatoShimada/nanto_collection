@@ -13,9 +13,10 @@
   display: flex;
   width: 100%;
   max-width: var(--max-width);
-  background: var(--color-primary);
+  background: var(--color-banner);
   height: var(--banner-height);
   pointer-events: auto;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .button {
@@ -27,17 +28,17 @@
   border: none;
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 400;
+  font-size: 0.9375rem;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }
 
 .button:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .button:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
