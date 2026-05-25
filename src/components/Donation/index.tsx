@@ -7,6 +7,7 @@ export function Donation() {
   return (
     <FadeInSection id={SECTION_IDS.donation}>
       <h2 className={styles.heading}>{DONATION.heading}</h2>
+      <img src="/images/2.jpg" alt="寄付金・協賛金のお願い" className={styles.image} />
       {DONATION.body.map((p, i) => (
         <p key={i} className={styles.body}>{p}</p>
       ))}
@@ -31,7 +32,10 @@ export function Donation() {
         <a href={LINKS.mailto} className={styles.ctaSecondary}>
           {DONATION.buttons.inquiry}
         </a>
-        <a href={LINKS.stripeCheckout} target="_blank" rel="noopener noreferrer" className={styles.cta}>
+        <a 
+          href={`${LINKS.mailto}?subject=${encodeURIComponent(DONATION.mailTemplate.subject)}&body=${encodeURIComponent(DONATION.mailTemplate.body)}`} 
+          className={styles.cta}
+        >
           {DONATION.buttons.apply}
         </a>
       </div>

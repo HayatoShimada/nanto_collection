@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { TitleSection } from "@/components/TitleSection";
 import { About } from "@/components/About";
 import { EventInfo } from "@/components/EventInfo";
 import { Application } from "@/components/Application";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <TitleSection />
       <About />
       <EventInfo />
       <Application />

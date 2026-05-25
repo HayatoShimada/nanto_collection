@@ -7,6 +7,7 @@ export function Application() {
   return (
     <FadeInSection id={SECTION_IDS.application}>
       <h2 className={styles.heading}>{APPLICATION.heading}</h2>
+      <img src="/images/4.jpg" alt="参加モデル大募集" className={styles.image} />
       {APPLICATION.body.map((p, i) => (
         <p key={i} className={styles.body}>{p}</p>
       ))}
